@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Button, Text } from 'native-base';
 
 import style from './style';
@@ -8,12 +8,13 @@ class Seasons extends PureComponent {
     renderSeasons() {
         let items = [];
 
-        for (let i = 0; i < 20; i++) {
-            const year = '20' + (i > 9 ? i : `0${i}`);
+
+        for (let i = 1950; i < 2020; i++) {
+            const year = i;
             items.push(
-                <Button 
+                <Button style={ style.button }
                     onPress={ () => this.props.onHandleData(year) }
-                    key={ `season-${i}` }
+                    key={ `season-${i.toString()}` }
                 >
                     <Text>
                         { year } 

@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 import Seasons from '../../components/Seasons';
+import LogoTitle from '../../components/LogoTitle';
 
 import { SafeAreaView } from 'react-navigation';
 
@@ -13,13 +14,11 @@ export default class Home extends React.Component {
     }
 
     static navigationOptions = () => {
-        return {
-            title: 'Home'
-        };
+      headerTitle: <LogoTitle />
     }
   
     redirectTo(season){
-        this.props.navigation.navigate('Races', { 
+        this.props.navigation.navigate('Season', { 
             season
         });
     }

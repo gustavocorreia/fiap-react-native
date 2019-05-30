@@ -7,6 +7,8 @@ import {
 
 import HomeView from './views/Home'
 import RacesView from './views/Races'
+import SeasonView from './views/Season'
+import DriversView from './views/Drivers'
 
 const AppNavigator = createStackNavigator(
   {
@@ -15,6 +17,12 @@ const AppNavigator = createStackNavigator(
     },
     Races: {
       screen: RacesView
+    },
+    Season: {
+      screen: SeasonView
+    },
+    Drivers: {
+      screen: DriversView
     }
   },
   {
