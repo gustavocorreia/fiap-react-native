@@ -12,7 +12,9 @@ export default class Races extends React.Component{
     componentDidMount(){
         const season = this.props.navigation.getParam('season');
         
-        this.getData(season);
+        this.getData({
+            results: season
+        });
     }
 
     getData(season) {
