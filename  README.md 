@@ -1,0 +1,14 @@
+#Fiap-React-Native
+
+Project was create with expo-cli
+
+## Available Scripts
+
+First, you need to run:
+
+### `git clone https://github.com/gustavocorreia/fiap-react-Native`
+
+In the project directory, you can run two commands:
+
+### `npm install`
+### `npm start`

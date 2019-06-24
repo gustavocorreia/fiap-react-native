@@ -3,9 +3,17 @@ import { SafeAreaView } from 'react-navigation';
 import { Button, Text } from 'native-base';
 
 export default class Season extends React.Component{
+
     state = {
         results: 0,
     };
+
+    constructor(props) {
+        super(props);
+
+        this.redirectToDrivers = this.redirectToDrivers.bind(this);
+        this.redirectToRaces = this.redirectToRaces.bind(this);
+    }
 
     componentDidMount(){
         const season = this.props.navigation.getParam('season');

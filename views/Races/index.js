@@ -2,7 +2,7 @@ import React from 'react';
 import { List, ListItem, Text } from 'native-base'
 import { SafeAreaView } from 'react-navigation';
 
-export default class Races extends React.Component{
+export default class Races extends React.Component {
 
     state = {
         results: [],
@@ -12,9 +12,7 @@ export default class Races extends React.Component{
     componentDidMount(){
         const season = this.props.navigation.getParam('season');
         
-        this.getData({
-            results: season
-        });
+        this.getData(season);
     }
 
     getData(season) {
@@ -30,9 +28,9 @@ export default class Races extends React.Component{
     renderItem(item){
         return (
             <ListItem key={ item.round }>
-                <Text>Race: { item.raceName } {"\n"}
-                      Round: { item.round } {"\n"}
-                      Date: { item.date }</Text>
+                <Text>Corrida: { item.raceName } {"\n"}
+                      Rodada: { item.round } {"\n"}
+                      Data: { item.date }</Text>
             </ListItem>
         );
     }
